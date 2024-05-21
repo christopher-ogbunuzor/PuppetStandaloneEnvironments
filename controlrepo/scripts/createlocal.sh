@@ -53,5 +53,6 @@ mkdir -p $tdir2
 # but we need shell variables, thus we terminate the quotes either 
 # side of tdir and crroot
 
+# Had to add force=>true as it could not remove existing symlink when i reran this script
 ${pbin} apply --test --environment=production \
   -e 'file { "'${tdir}'/controlrepoEnv": force=>true, ensure=>link,target=>"'${crroot}'",}'

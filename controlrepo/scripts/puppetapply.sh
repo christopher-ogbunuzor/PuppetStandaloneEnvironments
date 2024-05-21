@@ -31,4 +31,4 @@ set -x
 
 # assuming that puppet is in PATH via /etc/profile.d or similar
 
-$pbin apply --test --environment=local ${1} ${envdir}/manifests
+$pbin apply --test --environment=controlrepoEnv ${1} ${envdir}/manifests
