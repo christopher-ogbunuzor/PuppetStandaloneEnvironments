@@ -1,6 +1,6 @@
 #!/bin/bash
 
-envdir="/etc/puppetlabs/code/environments/controlrepoEnv"
+envdir="/etc/puppetlabs/code/environments/jenkinsroleprofileEnv"
 
 if [ "root" = "$(whoami)" ]; then
   :
