@@ -21,7 +21,7 @@ else
   echo "ok: located control-repo in $crroot"
 fi
 
-tdir="/etc/puppetlabs/code/environments"
+tdir="/etc/puppetlabs/code/environments/controlrepoEnv"
 pcan1="/opt/puppetlabs/bin/puppet"
 pcan2="/usr/local/bin/puppet"
 
