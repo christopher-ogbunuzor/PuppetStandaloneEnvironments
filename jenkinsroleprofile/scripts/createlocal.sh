@@ -6,8 +6,10 @@ else
   echo "error: run as root; eg: sudo $0" 1>&2
   exit 1
 fi
-
-here=$(readlink -f $0)
+echo "Print value of dollar 0: $0"
+here=$(readlink -f $0)  #read full path of executing script
+echo "PRINTING LOCAL SCRIPT LOCATION: $here"
+echo $here
 
 crroot=$(echo "$here" | sed 's~^\(.*\)/scripts/.*~\1~g')
 
@@ -50,5 +52,5 @@ fi
 # but we need shell variables, thus we terminate the quotes either 
 # side of tdir and crroot
 
-${pbin} apply --test --environment=controlrepoEnv \
+${pbin} apply --test --environment=jenkinsroleprofileEnv \
   -e 'file { "'${tdir}'/local": ensure=>link,target=>"'${crroot}'",}'
