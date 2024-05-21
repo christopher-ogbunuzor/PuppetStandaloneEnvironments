@@ -1,0 +1,19 @@
+---
+lookup_options:
+  classes:
+    merge: unique
+  apply_classes:
+    merge: unique
+
+classes:
+  - '::profile::motd::init'
+  - '::profile::motd::role'
+  - '::profile::puppet::factsd'
+
+# classes list for when puppet apply is used
+# add this structure to data/puppetapply.yaml
+apply_classes:
+  - '::profile::puppet::clientscope'
+  - '::profile::puppet::factsd'
+
+profile::motd::params::motd_behav: 'ignore'
