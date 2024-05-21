@@ -54,4 +54,4 @@ mkdir -p $tdir2
 # side of tdir and crroot
 
 ${pbin} apply --test --environment=production \
-  -e 'file { "'${tdir}'/controlrepoEnv": ensure=>link,target=>"'${crroot}'",}'
+  -e 'file { "'${tdir}'/controlrepoEnv": force=>true, ensure=>link,target=>"'${crroot}'",}'
