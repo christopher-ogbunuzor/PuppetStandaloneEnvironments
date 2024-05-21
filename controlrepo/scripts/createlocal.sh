@@ -21,7 +21,8 @@ else
   echo "ok: located control-repo in $crroot"
 fi
 
-tdir="/etc/puppetlabs/code/environments/controlrepoEnv"
+tdir2="/etc/puppetlabs/code/environments/controlrepoEnv"
+tdir="/etc/puppetlabs/code/environments"
 pcan1="/opt/puppetlabs/bin/puppet"
 pcan2="/usr/local/bin/puppet"
 
@@ -46,9 +47,11 @@ else
   echo "ok: ${tdir} exists"
 fi
 
+mkdir -p $tdir2
+
 # to protect the puppet code from shell interpretation, it's in single quotes
 # but we need shell variables, thus we terminate the quotes either 
 # side of tdir and crroot
 
-${pbin} apply --test --environment=controlrepoEnv \
-  -e 'file { "'${tdir}'/local": ensure=>link,target=>"'${crroot}'",}'
+${pbin} apply --test --environment=production \
+  -e 'file { "'${tdir}'/controlrepoEnv": ensure=>link,target=>"'${crroot}'",}'
