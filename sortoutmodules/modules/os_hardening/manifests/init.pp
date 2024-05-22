@@ -294,23 +294,23 @@ class os_hardening (
     chfn_restrict            => $chfn_restrict,
     allow_login_without_home => $allow_login_without_home,
   }
-  class { 'os_hardening::minimize_access':
-    allow_change_user                  => $allow_change_user,
-    manage_home_permissions            => $manage_home_permissions,
-    manage_log_permissions             => $manage_log_permissions,
-    manage_cron_permissions            => $manage_cron_permissions,
-    manage_system_users                => $manage_system_users,
-    ignore_users                       => $ignore_users,
-    ignore_home_users                  => $ignore_home_users,
-    ignore_restrict_log_dir            => $ignore_restrict_log_dir,
-    ignore_files_in_folder_to_restrict => $ignore_files_in_folder_to_restrict,
-    folders_to_restrict                => $folders_to_restrict_int,
-    ignore_max_files_warnings          => $ignore_max_files_warnings,
-    restrict_log_dir                   => $restrict_log_dir,
-    shadowgroup                        => $merged_shadowgroup,
-    shadowmode                         => $merged_shadowmode,
-    recurselimit                       => $recurselimit,
-  }
+  # class { 'os_hardening::minimize_access':
+  #   allow_change_user                  => $allow_change_user,
+  #   manage_home_permissions            => $manage_home_permissions,
+  #   manage_log_permissions             => $manage_log_permissions,
+  #   manage_cron_permissions            => $manage_cron_permissions,
+  #   manage_system_users                => $manage_system_users,
+  #   ignore_users                       => $ignore_users,
+  #   ignore_home_users                  => $ignore_home_users,
+  #   ignore_restrict_log_dir            => $ignore_restrict_log_dir,
+  #   ignore_files_in_folder_to_restrict => $ignore_files_in_folder_to_restrict,
+  #   folders_to_restrict                => $folders_to_restrict_int,
+  #   ignore_max_files_warnings          => $ignore_max_files_warnings,
+  #   restrict_log_dir                   => $restrict_log_dir,
+  #   shadowgroup                        => $merged_shadowgroup,
+  #   shadowmode                         => $merged_shadowmode,
+  #   recurselimit                       => $recurselimit,
+  # }
   class { 'os_hardening::modules':
     disable_filesystems   => $disable_filesystems,
   }
