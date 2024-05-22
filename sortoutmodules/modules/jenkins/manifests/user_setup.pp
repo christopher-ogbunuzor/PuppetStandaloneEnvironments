@@ -20,22 +20,23 @@ class jenkins::user_setup {
   # ensure_resource is used to try to maintain backwards compatiblity with
   # manifests that were able to external declare resources due to the
   # old conditional behavior of jenkins::plugin
-  if $jenkins::manage_user {
-    ensure_resource('user', $jenkins::user, {
-        ensure     => present,
-        gid        => $jenkins::group,
-        home       => $jenkins::localstatedir,
-        managehome => false,
-        system     => true,
-    })
-  }
+  
+  # if $jenkins::manage_user {
+  #   ensure_resource('user', $jenkins::user, {
+  #       ensure     => present,
+  #       gid        => $jenkins::group,
+  #       home       => $jenkins::localstatedir,
+  #       managehome => false,
+  #       system     => true,
+  #   })
+  # }
 
-  if $jenkins::manage_group {
-    ensure_resource('group', $jenkins::group, {
-        ensure => present,
-        system => true,
-    })
-  }
+  # if $jenkins::manage_group {
+  #   ensure_resource('group', $jenkins::group, {
+  #       ensure => present,
+  #       system => true,
+  #   })
+  # }
 
   $plugin_dir_params = $jenkins::purge_plugins ? {
     true    => $dir_params + {
