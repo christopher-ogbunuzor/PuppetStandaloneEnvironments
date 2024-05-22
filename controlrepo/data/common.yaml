@@ -14,7 +14,7 @@ classes:
 # add this structure to data/puppetapply.yaml
 apply_classes:
   - '::profile::puppet::clientscope'
-  # - '::profile::puppet::factsd'
+  - '::profile::puppet::factsd'
   # - "class { 'os_hardening': }"
 
 profile::motd::params::motd_behav: 'ignore'
