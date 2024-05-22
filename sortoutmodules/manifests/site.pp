@@ -5,7 +5,7 @@ node default {
   # the below are modules, not classes
   include stdlib
   # include java # class already included inthe profile jenkins controller.pp
-  include jenkins # class already included inthe profile jenkins controller.pp
+  # include jenkins # class already included inthe profile jenkins controller.pp
   # include os_hardening  #will error out if it does not find class os_hardening in the imported module
   # include concat
   include my_module
@@ -18,7 +18,7 @@ node default {
   class { 'os_hardening':
     password_max_age => 29400,
   }
-  class { 'java':
-    package => 'java-1.8.0-openjdk-devel',
-  }
+  # class { 'java':
+  #   package => 'java-1.8.0-openjdk-devel',
+  # }
 }

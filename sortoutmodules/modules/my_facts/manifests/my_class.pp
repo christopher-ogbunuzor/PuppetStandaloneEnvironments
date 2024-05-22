@@ -10,8 +10,8 @@ class my_facts::my_class {
     content => "Another ${facts['os']['family']}",
     path    => '/tmp/my_facts',
   }
-  file { '/etc/facter/facts.d/custom_facts.rb':
-    ensure  => 'file',
-    content => "Facter.add('group') do\n  setcode do\n    'ci'\n  end\nend\n",
-  }
+  # file { '/etc/facter/facts.d/custom_facts.rb':
+  #   ensure  => 'file',
+  #   content => "Facter.add('group') do\n  setcode do\n    'ci'\n  end\nend\n",
+  # }
 }
