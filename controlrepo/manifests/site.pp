@@ -62,7 +62,6 @@ node default {
     }
   }
   else {
-    class { 'os_hardening': }
-    # lookup('classes').include
+     lookup('classes').include
   }
 }
