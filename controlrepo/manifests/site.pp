@@ -33,7 +33,7 @@ File { backup => false }
 # include ::stdlib
 # include ::augeas_core
 # include ::augeasproviders_sysctl
-# include ::os_hardening
+include ::os_hardening
 
 node default {
 
