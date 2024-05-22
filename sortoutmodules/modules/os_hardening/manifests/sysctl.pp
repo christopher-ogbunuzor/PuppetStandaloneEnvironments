@@ -73,7 +73,7 @@ class os_hardening::sysctl (
 
   # Networking
   # ----------
-
+  include ::augeasproviders_sysctl
   # Only enable IP traffic forwarding, if required.
   sysctl { 'net.ipv4.ip_forward': value => String(bool2num($enable_ipv4_forwarding)) }
 
