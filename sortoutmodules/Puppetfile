@@ -4,4 +4,5 @@ forge 'https://forge.puppet.com'
 # Versions should be updated to be the latest at the time you start
 mod 'puppetlabs/stdlib',      '4.25.1'
 mod 'hardening-os_hardening', '2.4.0'
+mod 'puppetlabs/concat',      '4.2.1'
 mod 'puppet-augeasproviders_sysctl', '3.2.0'

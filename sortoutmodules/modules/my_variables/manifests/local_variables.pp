@@ -18,9 +18,8 @@ class my_variables::local_variables {
     content => "Another ${my_content}",
     path    => '/tmp/local_variables.txt',
   }
-
-  augeasproviders_sysctl { "net.ipv4.ip_forward":
+  sysctl { 'net.ipv4.ip_forward':
     ensure => present,
-    value  => "1",
+    value  => '1',
   }
 }
