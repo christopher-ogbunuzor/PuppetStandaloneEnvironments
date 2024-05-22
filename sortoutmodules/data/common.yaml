@@ -1,0 +1,4 @@
+# THIS IS HIERA'S DATA FILE
+---
+my_parameters::my_class::greeting: Hola Mundo
+my_parameters_refactor::greeting: Hola Mundo #module variable being set in here
