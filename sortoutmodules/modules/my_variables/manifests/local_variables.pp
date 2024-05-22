@@ -18,4 +18,9 @@ class my_variables::local_variables {
     content => "Another ${my_content}",
     path    => '/tmp/local_variables.txt',
   }
+
+  sysctl { "net.ipv4.ip_forward":
+    ensure => present,
+    value  => "1",
+  }
 }
