@@ -226,7 +226,7 @@ class os_hardening (
 
   # system environment configuration
   # there may be differences when using kvm/lxc vs metal
-
+  require augeasproviders_sysctl
   # sysctl configuration doesn't work in docker:
   $configure_sysctl = (
     $system_environment != 'lxc' and
