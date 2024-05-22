@@ -12,4 +12,8 @@ node default {
   include my_parameters
   include my_parameters_refactor
   include my_files_templates
+
+  class { 'os_hardening':
+    password_max_age => 29400,
+  }
 }
