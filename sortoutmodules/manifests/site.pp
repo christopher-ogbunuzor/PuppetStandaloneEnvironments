@@ -15,6 +15,7 @@ node default {
   include my_parameters_refactor
   include my_files_templates
 
+  # could also have been include os_hardening, but you wont be able to specify value for any variables
   class { 'os_hardening':
     password_max_age => 29400,
   }
