@@ -13,12 +13,6 @@ class my_variables::local_variables {
     path    => '/tmp/locall_variables.txt',
   }
 
-  concat::fragment { '1':
-  target  => 'testconcat',
-  content => '1',
-  order   => '01',
-}
-
   file { '/tmp/local_variables.txt':
     ensure  => 'file',
     content => "Another ${my_content}",
