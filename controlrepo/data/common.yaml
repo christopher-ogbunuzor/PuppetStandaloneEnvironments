@@ -15,6 +15,6 @@ classes:
 apply_classes:
   - '::profile::puppet::clientscope'
   - '::profile::puppet::factsd'
-  - 'class { 'os_hardening': }'
+  - "class { 'os_hardening': }"
 
 profile::motd::params::motd_behav: 'ignore'
