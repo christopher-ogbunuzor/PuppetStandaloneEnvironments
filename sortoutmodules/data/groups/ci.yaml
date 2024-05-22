@@ -1,0 +1,2 @@
+ profile::jenkins::controller::java_dist: 'oracle-jdk8'
+ profile::jenkins::controller::java_version: '8u92'
