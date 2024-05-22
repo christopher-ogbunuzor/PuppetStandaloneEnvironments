@@ -14,9 +14,9 @@
 #     },
 #   }
 
-#   class { 'java':
-#     distribution => $java_dist,
-#     version      => $java_version,
-#     before       => Class['jenkins'],
-#   }
+  # class { 'java':
+  #   distribution => $java_dist,
+  #   version      => $java_version,
+  #   before       => Class['jenkins'],
+  # }
 # }

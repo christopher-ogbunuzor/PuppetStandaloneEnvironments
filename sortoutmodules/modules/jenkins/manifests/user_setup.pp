@@ -20,7 +20,6 @@ class jenkins::user_setup {
   # ensure_resource is used to try to maintain backwards compatiblity with
   # manifests that were able to external declare resources due to the
   # old conditional behavior of jenkins::plugin
-  
   # if $jenkins::manage_user {
   #   ensure_resource('user', $jenkins::user, {
   #       ensure     => present,
