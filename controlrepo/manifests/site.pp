@@ -31,6 +31,7 @@ File { backup => false }
   # ensure we have stdlib so we can use functions, facts therein
 
 include ::stdlib
+include ::augeas_core
 include ::augeasproviders_sysctl
 include ::os_hardening
 
