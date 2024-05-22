@@ -2,7 +2,7 @@ $my_content = 'Hello Top'
 node default {
   # include my_module::my_class - NO NEED TO INCLUDE INDIVIDUAL CLASSES since this is already done at the module level in init.pp file
   # the below are modules, not classes
-  # include concat
+  include concat
   # include stdlib
   include my_module
   include my_variables
