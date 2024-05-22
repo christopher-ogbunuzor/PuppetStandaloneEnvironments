@@ -18,7 +18,4 @@ node default {
   class { 'os_hardening':
     password_max_age => 29400,
   }
-  class { 'java':
-    package => 'java-1.8.0-openjdk-devel'
-  }
 }
